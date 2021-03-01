@@ -147,3 +147,6 @@ zeromq=4.3.4=h9f76cd9_0
 zipp=3.4.0=py_0
 zlib=1.2.11=h31e879b_1009
 zstd=1.4.8=h5b28eab_1
+
+tensorflow~=2.4.0rc0
+numpy~=1.18.5
