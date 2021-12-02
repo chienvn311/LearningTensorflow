@@ -26,3 +26,17 @@ print("Last row:", rank_4_tensor[-1, :].numpy())
 print("First item in last column:", rank_4_tensor[0, -1].numpy())
 print("Skip the first row:")
 print(rank_4_tensor[1:, :].numpy(), "\n")
+
+
+# Ragged Tensor
+digits = tf.ragged.constant([[3, 1, 4, 1], [], [5, 9, 2], [6], []])
+words = tf.ragged.constant([['So', 'Long'], ['Thank', 'For', 'The', 'Food']])
+print(tf.add(digits, 3))
+print(tf.reduce_mean(digits, axis=1))
+print(tf.concat([digits, [[5, 3]]], axis=0))
+print(tf.tile(digits, [1, 2]))
+print(tf.strings.substr(words, 0, 2))
+print(tf.map_fn(tf.math.square, digits))
+
+
+
